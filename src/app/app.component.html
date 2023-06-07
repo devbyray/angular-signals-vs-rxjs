@@ -1,52 +1,56 @@
 
 
 <style>
-  :host {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-  }
   nav {
     text-align: center;
-    display: flex;
-    flex-direction: column;
+    background-color: blueviolet;
   }
   nav ul {
     list-style: none;
     justify-content: center;
     display: flex;
     gap: 1rem;
+    margin: 0 0 0 0;
+    padding: 0;
+    font-size: 1rem;
   }
-  a {
-    color: blue;
+  nav ul li {
+    padding: 0;
+    margin: 0 0 0 0;
+  }
+  nav div {
+    padding-bottom: 1rem;
+  }
+  nav strong {
+    font-size: 1.2rem;
   }
   a.active {
-    color: red;
+    background-color: aqua;
+    color: #000;
+    padding: 0.3rem;
+    text-decoration: none;
   }
 </style>
 
 <div class="content" role="main">
   <nav>
-    <ul>
-      <li><strong>Signals</strong></li>
-      <li><a routerLink="/signals-set-value" routerLinkActive="active">Set value</a></li>
-      <li><a routerLink="/signals-update-value" routerLinkActive="active">Update value</a></li>
-      <li><a routerLink="/signals-get-updates" routerLinkActive="active">Get updates</a></li>
-    </ul>
-    <ul>
-      <li><strong>BehaviourSubject</strong></li>
-      <li><a routerLink="/behavioursubject" routerLinkActive="active">BehaviourSubject</a></li>
-    </ul>
+    <div>
+      <strong>Signals</strong>
+      <ul>
+        <li><a routerLink="/signals-set-value" routerLinkActive="active">Set value</a></li>
+        <li><a routerLink="/signals-update-value" routerLinkActive="active">Update value</a></li>
+        <li><a routerLink="/signals-get-updates" routerLinkActive="active">Get updates</a></li>
+        <li><a routerLink="/signals-get-updates-effect-overwrite" routerLinkActive="active">Get updates and overwrite</a></li>
+        <li><a routerLink="/signals-compute-value" routerLinkActive="active">Compute values</a></li>
+      </ul>
+    </div>
+    <div>
+
+      <strong>BehaviourSubject</strong>
+      <ul>
+        <li><a routerLink="/behavioursubject" routerLinkActive="active">BehaviourSubject</a></li>
+      </ul>
+    </div>
   </nav>
-  <hr />
   <router-outlet></router-outlet>
-  <!-- <h1>Signals vs BehaviourSubject!</h1>
-  <h2>Signal</h2>
-  <app-signals></app-signals>
-  <hr />
-  <h2>BehaviourSubject</h2>
-  <app-behavioursubject></app-behavioursubject> -->
 </div>

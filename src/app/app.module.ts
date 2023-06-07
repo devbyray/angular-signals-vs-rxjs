@@ -8,6 +8,7 @@ import { SignalsUpdateValueComponent } from './signals-update-value/signals-upda
 import { AppRoutingModule } from './app-routing.module';
 import { SignalsGetUpdatesComponent } from './signals-get-updates/signals-get-updates.component';
 import { SignalsComputeValueComponent } from './signals-compute-value/signals-compute-value.component';
+import { SignalsGetUpdatesEffectUpdateComponent } from './signals-get-updates-effect-update/signals-get-updates-effect-update.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { SignalsComputeValueComponent } from './signals-compute-value/signals-co
     SignalsUpdateValueComponent,
     SignalsGetUpdatesComponent,
     SignalsComputeValueComponent,
+    SignalsGetUpdatesEffectUpdateComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

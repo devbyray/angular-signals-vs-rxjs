@@ -1,1 +1,11 @@
-<p>signals-compute-value works!</p>
+<div>
+	<h2>Get updates and overwrite signal in effect</h2>
+
+	<p><strong>Firstname:</strong> {{ firstName() }} <br>
+	<strong>Lastname:</strong> {{ lastName() }}</p>
+	<p><strong>Fullname computation:</strong> {{ fullName() }}</p>
+
+    <p>
+        <button (click)="changeFirstName()">Update firstname</button>
+    </p>
+</div>

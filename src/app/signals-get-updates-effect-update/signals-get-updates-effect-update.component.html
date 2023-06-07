@@ -1,0 +1,10 @@
+<div>
+    <h2>Get updates and overwrite signal in effect</h2>
+    <p>
+      Add {{30 | currency: 'EUR'}} to the price <br> of {{10 | currency: 'EUR'}} and notify.
+    </p>
+    
+    <p><strong>Is price updated: </strong> {{priceUpdated() ? "👍" : "👎"}}</p>
+    <p><strong>Price: </strong> {{price() | currency:'EUR'}}</p>
+    <button (click)="updatePrice()" [ngClass]="{'is-updated': priceUpdated()}">Add {{30 | currency: 'EUR'}}</button>
+  </div>
