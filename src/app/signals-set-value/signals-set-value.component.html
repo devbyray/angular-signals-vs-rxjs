@@ -1,0 +1,8 @@
+<div>
+  <h2>Set value</h2>
+  <p>
+    Set product price to {{30 | currency: 'EUR'}}.
+  </p>
+  <p><strong>Price: </strong> {{price() | currency:'EUR'}}</p>
+  <button (click)="setNewPrice()">Set new price</button>
+</div>

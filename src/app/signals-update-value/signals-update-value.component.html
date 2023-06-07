@@ -1,0 +1,8 @@
+<div>
+  <h2>Update value</h2>
+  <p>
+    Add {{30 | currency: 'EUR'}} to the start price to of {{10 | currency: 'EUR'}}.
+  </p>
+  <p><strong>Price: </strong> {{startPrice() | currency:'EUR'}}</p>
+  <button (click)="updatePrice()">Add {{30 | currency: 'EUR'}}</button>
+</div>

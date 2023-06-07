@@ -1,0 +1,10 @@
+<div>
+  <h2>Get updates</h2>
+  <p>
+    Add {{30 | currency: 'EUR'}} to the start price <br> to of {{10 | currency: 'EUR'}} and notify.
+  </p>
+  
+  <p><strong>Is price updated: </strong> {{priceUpdated() ? "👍" : "👎"}}</p>
+  <p><strong>Price: </strong> {{startPrice() | currency:'EUR'}}</p>
+  <button (click)="updatePrice()" [ngClass]="{'is-updated': priceUpdated()}">Add {{30 | currency: 'EUR'}}</button>
+</div>
