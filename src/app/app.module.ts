@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SignalsGetUpdatesComponent } from './signals-get-updates/signals-get-updates.component';
 import { SignalsComputeValueComponent } from './signals-compute-value/signals-compute-value.component';
 import { SignalsGetUpdatesEffectUpdateComponent } from './signals-get-updates-effect-update/signals-get-updates-effect-update.component';
+import { SignalsUpdatesArrayComponent } from 'src/app/signals-updates-array/signals-updates-array.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { SignalsGetUpdatesEffectUpdateComponent } from './signals-get-updates-ef
     SignalsGetUpdatesComponent,
     SignalsComputeValueComponent,
     SignalsGetUpdatesEffectUpdateComponent,
+    SignalsUpdatesArrayComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

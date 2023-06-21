@@ -15,7 +15,7 @@ export class SignalsGetUpdatesComponent {
     });
   }
 
-  updatePrice() {
+  updatePrice(): void {
     this.price.update((price) => price + 30);
     this.priceUpdated.set(true);
     setTimeout(() => {

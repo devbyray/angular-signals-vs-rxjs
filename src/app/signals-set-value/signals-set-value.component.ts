@@ -8,7 +8,7 @@ import { Component, signal } from '@angular/core';
 export class SignalsSetValueComponent {
   price = signal<number>(10);
 
-  setNewPrice() {
+  setNewPrice(): void {
     this.price.set(30);
   }
 }

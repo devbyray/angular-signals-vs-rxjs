@@ -1,0 +1,20 @@
+<div>
+	<h2>Get updates</h2>
+	<ol>
+		<li *ngFor="let item of prices(); index as i">
+			{{ item.price | currency : 'EUR' }}
+			<button (click)="updatePrice(i)">Change price</button>
+		</li>
+	</ol>
+
+	<footer>
+		<button (click)="updatePrice(0)">Change first price</button>
+		<button (click)="addPrice()">Add price to array</button>
+	</footer>
+
+	<hr />
+
+	<pre class="code">
+    <code>{{ prices() | json}}</code>
+  </pre>
+</div>

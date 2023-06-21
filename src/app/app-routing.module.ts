@@ -6,12 +6,14 @@ import { BehavioursubjectComponent } from './behavioursubject/behavioursubject.c
 import { SignalsGetUpdatesComponent } from './signals-get-updates/signals-get-updates.component';
 import { SignalsGetUpdatesEffectUpdateComponent } from 'src/app/signals-get-updates-effect-update/signals-get-updates-effect-update.component';
 import { SignalsComputeValueComponent } from 'src/app/signals-compute-value/signals-compute-value.component';
+import { SignalsUpdatesArrayComponent } from 'src/app/signals-updates-array/signals-updates-array.component';
 
 const routes: Routes = [
   // { path: '', component: AppComponent },
   { path: 'signals-set-value', component: SignalsSetValueComponent },
   { path: 'signals-update-value', component: SignalsUpdateValueComponent },
   { path: 'signals-get-updates', component: SignalsGetUpdatesComponent },
+  { path: 'signals-get-updates-array', component: SignalsUpdatesArrayComponent },
   { path: 'signals-get-updates-effect-overwrite', component: SignalsGetUpdatesEffectUpdateComponent },
   { path: 'signals-compute-value', component: SignalsComputeValueComponent },
   // BehaviorSubject
