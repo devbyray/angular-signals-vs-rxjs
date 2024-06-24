@@ -7,20 +7,22 @@ interface Obj {
 @Component({
 	selector: 'app-signals-updates-array',
 	styleUrls: ['./signals-updates-array.component.css'],
-	templateUrl: './signals-updates-array.component.html',
+	templateUrl: './signals-updates-array.component.html'
 })
 export class SignalsUpdatesArrayComponent {
-	prices = signal<Obj[]>([
-		{ price: 10},
-        { price: 20},
-        { price: 30},
-	])
+	prices = signal([{ price: 10 }, { price: 20 }, { price: 30 }])
 
-    updatePrice(index: number): void {
-        this.prices.mutate(value => value[index].price = this.getRandomPrice())
+	updatePrice(index: number): void {
+		this.prices.update(value => {
+			value[index].price = this.getRandomPrice()
+			return value
+		})
 	}
 	addPrice(): void {
-		this.prices.mutate(value => value.push({ price: this.getRandomPrice() }))
+		this.prices.update(value => {
+			value.push({ price: this.getRandomPrice() })
+			return value
+		})
 	}
 
 	getRandomPrice(): number {
